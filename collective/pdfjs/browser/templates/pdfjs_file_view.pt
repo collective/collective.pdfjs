@@ -12,6 +12,40 @@
             type="text/javascript" 
             tal:attributes="src string:++resource++collective.pdfjs.ecmascripts/viewer.js">
         </script>
+        
+        <script type="text/javascript">
+	        // Auto fixed toolbar
+            // Credits: http://www.bennadel.com/blog
+			jQuery(function( $ ){
+			var placeholder = $( "#controls-wrapper" );
+			var message = $( "#controls" );
+			var view = $( window );
+			view.bind(
+				"scroll resize",
+				function(){
+					var placeholderTop = placeholder.offset().top;
+					var viewTop = view.scrollTop();
+					if (
+						(viewTop > placeholderTop) &&
+							!message.is( ".controls-fixed" )
+					){
+						placeholder.height(
+						placeholder.height()
+						);
+						message.addClass( "controls-fixed" );
+ 
+					} else if (
+						(viewTop <= placeholderTop) &&
+						message.is( ".controls-fixed" )
+						){
+							placeholder.css( "height", "auto" );
+							message.removeClass( "controls-fixed" );
+ 
+						}
+					}
+					);
+				});
+		</script>
 	</metal:js>
 
 <body>
@@ -34,6 +68,7 @@
               <h2 i18n:translate="heading_pdf_inlinepreview">PDF Contents</h2>
               
               <!-- viewer -->
+              <div id="controls-wrapper">
               <div id="controls">
 			      <button id="previous" onclick="PDFView.page--;" oncontextmenu="return false;">
 			        <img src="++resource++collective.pdfjs.images/go-up.svg" align="top" height="32"/>
@@ -65,26 +100,27 @@
 			        <img src="++resource++collective.pdfjs.images/zoom-in.svg" align="top" height="32"/>
 			      </button>
 
-      <div class="separator"></div>
+			      <div class="separator"></div>
 
-      <select id="scaleSelect" onchange="PDFView.parseScale(this.value);" oncontextmenu="return false;">
-        <option id="customScaleOption" value="custom"></option>
-        <option value="0.5">50%</option>
-        <option value="0.75">75%</option>
-        <option value="1">100%</option>
-        <option value="1.25">125%</option>
-        <option value="1.5" selected="selected">150%</option>
-        <option value="2">200%</option>
-        <option id="pageWidthOption" value="page-width">Page Width</option>
-        <option id="pageFitOption" value="page-fit">Page Fit</option>
-      </select>
-
-      <div class="separator"></div>
-
-      <a href="#" id="viewBookmark" title="Current View (bookmark or copy the location)">
-        <img src="++resource++collective.pdfjs.images/bookmark.svg" alt="Bookmark" align="top" height="32"/>
-      </a>
-    </div>
+			      <select id="scaleSelect" onchange="PDFView.parseScale(this.value);" oncontextmenu="return false;">
+			        <option id="customScaleOption" value="custom"></option>
+			        <option value="0.5">50%</option>
+			        <option value="0.75">75%</option>
+			        <option value="1">100%</option>
+			        <option value="1.25">125%</option>
+			        <option value="1.5" selected="selected">150%</option>
+			        <option value="2">200%</option>
+			        <option id="pageWidthOption" value="page-width">Page Width</option>
+			        <option id="pageFitOption" value="page-fit">Page Fit</option>
+			      </select>
+			
+			      <div class="separator"></div>
+			
+			      <a href="#" id="viewBookmark" title="Current View (bookmark or copy the location)">
+			        <img src="++resource++collective.pdfjs.images/bookmark.svg" alt="Bookmark" align="top" height="32"/>
+			      </a>
+			    </div>
+			    </div>
 
     <div id="sidebar">
       <div id="sidebarBox">
