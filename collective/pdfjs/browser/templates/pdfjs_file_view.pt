@@ -24,7 +24,7 @@
             <div tal:condition="python: content_type=='application/pdf'">
               <noscript>
 	            <object i18n:translate="noscript_plugin_required"
-	              tal:attributes="data context/id" 
+	              tal:attributes="data context/id|nothing" 
 	              type="application/pdf" 
 	              width="100%" 
 	              height="600">
