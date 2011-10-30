@@ -16,4 +16,15 @@
       directory="ecmascripts"
       />
       
+  <browser:resourceDirectory
+      name="collective.pdfjs.images"
+      directory="images"
+      />
+      
+  <browser:resourceDirectory
+      name="collective.pdfjs.stylesheets"
+      directory="stylesheets"
+      />
+      
 </configure>
+

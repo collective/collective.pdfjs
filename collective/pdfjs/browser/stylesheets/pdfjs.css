@@ -1,0 +1,27 @@
+/* === Toolbar === */
+#controls {
+  background-color: #eee;
+  background: -moz-linear-gradient(center bottom, #eee 0%, #fff 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.0, #ddd), color-stop(1.0, #fff));
+  border-bottom: 1px solid #666;
+  padding: 4px;
+  position: absolute;
+  left: 0px;
+  height: 40px;
+  width: 100%;
+  z-index: 1;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.separator {
+  display: inline;
+  border-left: 1px solid #d3d3d3;
+  border-right: 1px solid #fff;
+  height: 32px;
+  width:0px;
+  margin: 4px;
+}
+
+#sidebar {
+	display: none;
+}
