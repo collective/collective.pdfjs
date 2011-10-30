@@ -1,0 +1,19 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+      xmlns:browser="http://namespaces.zope.org/browser"
+      i18n_domain="collective.pdfjs">
+
+  <browser:page
+      name="pdfjs_file_view"
+      for="*"
+      template="templates/pdfjs_file_view.pt"
+      layer=".interfaces.ICollectivePdfjsLayer"
+      class=".fileviews.PdfJsFileView"
+      permission="zope2.View"
+      />
+    
+  <browser:resourceDirectory
+      name="collective.pdfjs.ecmascripts"
+      directory="ecmascripts"
+      />
+      
+</configure>
