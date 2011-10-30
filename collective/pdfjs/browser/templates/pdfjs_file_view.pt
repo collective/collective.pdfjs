@@ -4,7 +4,15 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="collective.pdfjs">
+            
+    <!-- embed the fancy pdf.js viewer -->
+	<metal:js fill-slot="javascript_head_slot">
+        <script
+            type="text/javascript" 
+            tal:attributes="src string:++resource++collective.pdfjs.ecmascripts/viewer.js">
+        </script>
+	</metal:js>
 
 <body>
 
@@ -22,6 +30,8 @@
                 </pre>
             </div>
             <div tal:condition="python: content_type=='application/pdf'">
+              <h2 i18n:translate="heading_pdf_inlinepreview">PDF Contents</h2>
+              <canvas id="the-canvas" style="border:1px solid black;"/>
               <noscript>
 	            <object i18n:translate="noscript_plugin_required"
 	              tal:attributes="data context/id|nothing" 
