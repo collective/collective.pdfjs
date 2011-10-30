@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3.0'
+version = '0.3.1'
 
 setup(name='collective.pdfjs',
       version=version,
       description="pdf.js integration for Plone",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
