@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="File">
+ <property name="view_methods" purge="False">
+  <element value="pdfjs_file_view"/>
+ </property>
+</object>
