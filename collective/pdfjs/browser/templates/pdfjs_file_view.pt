@@ -80,6 +80,10 @@
       </select>
 
       <div class="separator"></div>
+
+      <a href="#" id="viewBookmark" title="Current View (bookmark or copy the location)">
+        <img src="images/bookmark.svg" alt="Bookmark" align="top" height="32"/>
+      </a>
     </div>
 
     <div id="sidebar">
