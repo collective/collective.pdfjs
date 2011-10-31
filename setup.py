@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3.4'
+version = '0.3.5'
 
 setup(name='collective.pdfjs',
       version=version,
@@ -17,7 +17,7 @@ setup(name='collective.pdfjs',
       keywords='plone zope pdf JavaScript',
       author='zedr',
       author_email='zedr@zedr.com',
-      url='http://svn.plone.org/svn/collective/',
+      url='https://github.com/zedr/collective.pdfjs',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
