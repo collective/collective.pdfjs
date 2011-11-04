@@ -1,0 +1,7 @@
+TODO
+====
+
+0.4.0
+-----
+    - Tests: basic code coverage
+    - Reasonably minified pdf.js
