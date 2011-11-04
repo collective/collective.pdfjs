@@ -5,3 +5,4 @@
 build
 dist
 minify.py
+pdfjs_minify.py

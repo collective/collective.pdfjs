@@ -10,7 +10,8 @@ This product adds pdf.js support for Plone.
 Pdf.js is a JavaScript library for rendering PDF documents in the canvas,
 without using external plugins; only JavaScript is needed.
 
-.. _PDF.js Repository: https://github.com/andreasgal/pdf.js
+.. _PDF.js Repository: https://github.com/mozilla/pdf.js
+.. _collective.pdfjs Repository: https://github.com/collective/collective.pdfjs
 
 This product will make the JavaScript library available as a resource, and
 add a new view for the File content type.

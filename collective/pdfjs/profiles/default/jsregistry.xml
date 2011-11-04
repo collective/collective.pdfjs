@@ -3,10 +3,10 @@
 
 	<javascript id="++resource++collective.pdfjs.ecmascripts/pdf.js"
 		authenticated="False" cacheable="True" compression="safe" cookable="True"
-		enabled="True" expression="" inline="False" />
+		enabled="False" expression="" inline="False" />
 
 	<javascript id="++resource++collective.pdfjs.ecmascripts/pdf.min.js"
 		authenticated="False" cacheable="True" compression="safe" cookable="True"
-		enabled="False" expression="" inline="False" />
+		enabled="True" expression="" inline="False" />
 
 </object>
