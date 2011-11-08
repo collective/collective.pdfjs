@@ -1,9 +1,10 @@
 import unittest2 as unittest
+
 import transaction
+
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.testing.z2 import Browser
-
 
 from Products.CMFCore.utils import getToolByName
 
@@ -50,3 +51,5 @@ class TestSetup(unittest.TestCase):
         browser.open(portal['test_pdf'].absolute_url() + '/pdfjs_file_view')
         # A DOM element associated with this view is present
         self.assertTrue('#controls-wrapper' in browser.contents)
+
+
