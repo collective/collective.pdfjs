@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3.6'
+version = '0.3.7'
 
 setup(name='collective.pdfjs',
       version=version,
@@ -25,7 +25,6 @@ setup(name='collective.pdfjs',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'plone.app.testing',
       ],
       entry_points="""
       # -*- Entry points: -*-
