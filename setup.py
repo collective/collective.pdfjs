@@ -26,6 +26,9 @@ setup(name='collective.pdfjs',
       install_requires=[
           'setuptools',
       ],
+      extras_require={
+          'test': ['plone.app.testing',],
+      }
       entry_points="""
       # -*- Entry points: -*-
 
