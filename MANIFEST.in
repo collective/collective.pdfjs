@@ -1,0 +1,3 @@
+include HISTORY.txt
+include TODO.txt
+recursive-include collective *.txt *.py *.po *.xml *.zcml *.js *.css
