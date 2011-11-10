@@ -9,9 +9,10 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="collective.pdfjs"
+      title="Pdf.js integration for Plone"
       directory="profiles/default"
-      description="Installs the collective.pdfjs package"
+      description="Integrates Mozilla's PDF reader, written in JavaScript, in
+Plone; and also provides and enables a special view for the File content-type"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
       

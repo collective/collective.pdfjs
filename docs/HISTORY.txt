@@ -1,12 +1,17 @@
 Changelog
 =========
 
+0.2.2
+---------------------
+
+    - Renders the Tracemonkey PDF
+
 0.3.6
 ---------------------
     - Minified pdf.min.js
     - Tested on Chrome and Firefox
 
-0.2.2
----------------------
-
-    - Renders the Tracemonkey PDF
+0.4.0
+-----
+    - Tests: basic code coverage
+    - Reasonably minified pdf.js

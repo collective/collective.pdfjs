@@ -1,7 +1,6 @@
 TODO
 ====
 
-0.4.0
+0.4.2
 -----
-    - Tests: basic code coverage
-    - Reasonably minified pdf.js
+    - Simpler, better JavaScript reader
