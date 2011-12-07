@@ -1,17 +1,25 @@
 Changelog
 =========
 
-0.2.2
----------------------
+0.4.1dev
+-----
+    - Tests: added a test on availableLayouts
+      This fails because the view is not present,
+        no idea why. Must recheck.
+    - Added human name for the view, after a suggestion by
+      Marcel
 
-    - Renders the Tracemonkey PDF
+0.4.0
+-----
+    - Tests: basic code coverage
+    - Reasonably minified pdf.js
 
 0.3.6
 ---------------------
     - Minified pdf.min.js
     - Tested on Chrome and Firefox
 
-0.4.0
------
-    - Tests: basic code coverage
-    - Reasonably minified pdf.js
+0.2.2
+---------------------
+
+    - Renders the Tracemonkey PDF

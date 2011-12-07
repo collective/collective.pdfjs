@@ -42,7 +42,10 @@ incrementally inside the canvas. This means that big files on slow connections
 will take a while before displaying; you might want to switch to the standard
 view in this case.
 
-Contact
+Authors
 -------
-Rigel Di Scala <zedr@zedr.com>
-http://github.com/zedr
+Rigel Di Scala <zedr@zedr.com> <http://github.com/zedr>
+
+Contributors
+------------
+Marcel
