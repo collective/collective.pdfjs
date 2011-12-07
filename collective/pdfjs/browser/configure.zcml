@@ -1,6 +1,8 @@
 <configure xmlns="http://namespaces.zope.org/zope"
       xmlns:browser="http://namespaces.zope.org/browser"
       i18n_domain="collective.pdfjs">
+      
+  <include package="plone.app.contentmenu" />
 
   <browser:page
       name="pdfjs_file_view"
@@ -9,6 +11,14 @@
       layer=".interfaces.ICollectivePdfjsLayer"
       class=".fileviews.PdfJsFileView"
       permission="zope2.View"
+      />
+      
+  <browser:menuItem
+      for="Products.ATContentTypes.interface.IATFile"
+      menu="plone_displayviews"
+      title="Pdf.js View"
+      action="@@pdfjs_file_view"
+      description="View the PDF file inside the page, using an inline reader"
       />
     
   <browser:resourceDirectory
