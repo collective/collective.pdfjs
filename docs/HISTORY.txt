@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4.1dev
+0.4.2dev
 -----
     - Tests: added a test on availableLayouts
       This fails because the view is not present,
