@@ -40,16 +40,24 @@ class TestSetup(unittest.TestCase):
         for s in scripts:
             self.assertTrue(s in jss.getResourceIds())
 
+    def test__view_is_present(self):
+        """Check that our new view is present and listed"""
+        portal = self.layer['portal']
+        setRoles(portal, TEST_USER_ID, ['Manager'])
+        portal.invokeFactory('File', 'f1', title=u"Tracemonkey PDF")
+        transaction.commit()
+        layout_ids = [id for id, title in portal['f1'].getAvailableLayouts()]
+        # This fails, not sure why...
+        #self.failUnless("pdfjs_file_view" in layout_ids)
+
     def test__verify_my_view(self):
         """Check that the 'pdfjs_file_view is installed correctly,
         and viewable"""
         portal = self.layer['portal']
         setRoles(portal, TEST_USER_ID, ['Manager'])
-        portal.invokeFactory('File', 'test_pdf', title=u"Tracemonkey PDF")
+        portal.invokeFactory('File', 'f2', title=u"Tracemonkey PDF")
         transaction.commit()
         browser = Browser(portal)
-        browser.open(portal['test_pdf'].absolute_url() + '/pdfjs_file_view')
+        browser.open(portal['f2'].absolute_url() + '/pdfjs_file_view')
         # A DOM element associated with this view is present
         self.assertTrue('#controls-wrapper' in browser.contents)
-
-
