@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.4.2dev'
+version = '0.5.0a-dev'
 
 setup(name='collective.pdfjs',
       version=version,
