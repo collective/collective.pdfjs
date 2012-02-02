@@ -41,19 +41,24 @@
 
                 <div id="pdf-controls">
                     <button id="previous"
-                        onclick="pdf.renderNextPage();" 
+                        onclick="pdf.renderPrevPage();" 
                         oncontextmenu="return false;">
-                        &laquo;
+                        &laquo; Previous
                     </button>
                     <button id="next"
                         onclick="pdf.renderNextPage();"
                         oncontextmenu="return false;">
-                        &raquo;
+                        Next &raquo;
                     </button>
+                    <div id="pdf-stats">
+                    	<span id="pdf-page-number">1</span> / 
+                    	<span id="pdf-page-total">oo</span>
+                    </div>
                 </div>
 
                 <hr />
 
+				<div id="pdf-viewer">
                 <canvas id="the-canvas" style="border:1px solid black;"/>
                 <noscript>
                     <object i18n:translate="noscript_plugin_required"
@@ -67,6 +72,8 @@
 
                 <script tal:define="filename context/id"
                     tal:content="python: 'var pdf = new PdfView(\'%s\');' % filename"></script>
+                
+                </div>
 
             </div>
             </metal:block>

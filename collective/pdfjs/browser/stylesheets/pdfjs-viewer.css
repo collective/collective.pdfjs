@@ -1,0 +1,16 @@
+/* Pdf.js Viewer */
+#pdf-controls {
+	margin: 0 auto;
+	width: 100%;
+	margin-bottom: 1em;
+}
+#pdf-controls button {
+	padding: 0.5em 0.75em;
+}
+#pdf-viewer {
+	background-color: #efefef;
+	padding: 0.5em 1em;
+}
+#pdf-viewer canvas {
+	background-color: #fff;
+}
