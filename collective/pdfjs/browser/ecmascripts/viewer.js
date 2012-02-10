@@ -25,16 +25,21 @@ var PdfView = function (url) {
   // Load the document
   PDFJS.getPdf(url, function getPdfData(data) {
     self.doc = new PDFJS.PDFDoc(data);
+    return self.init();
   });
 
   // Render the page
   this.renderPage = function renderPage() {
+    // If the document has not loaded, fail silently...
+    if (self.doc === undefined) {
+      return false;
+    }
     var page = self.doc.getPage(pnum);
 
     self.canvas.height = page.height * pscale;
     self.canvas.width = page.width * pscale;
 
-    if (this.cbuttons.pnum !== 'undefined') {
+    if (this.cbuttons.pnum !== undefined) {
       this.cbuttons.pnum.innerHTML = pnum;
     }
     page.startRendering(self.context);
@@ -63,7 +68,9 @@ var PdfView = function (url) {
     get lastpage() { return self.doc.numPages }
   };
 
-
+  this.init = function init() {
+    self.page.number = 1;
+  }
 
 }
 

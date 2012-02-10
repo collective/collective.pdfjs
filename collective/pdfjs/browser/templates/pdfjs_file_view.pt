@@ -70,8 +70,9 @@
                     </object>
 					</noscript>
 
-					<script tal:define="filename context/id"
-                    tal:content="python: 'var pdf = new PdfView(\'%s\');' % filename"></script>
+					<script tal:content="view/jsinit">
+						/* JS code */
+					</script>
 
                 </div>
 
