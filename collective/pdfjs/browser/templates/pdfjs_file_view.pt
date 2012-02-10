@@ -9,24 +9,24 @@
     <!-- embed the fancy pdf.js viewer -->
     <metal:js fill-slot="javascript_head_slot">
         <script
-            type="text/javascript" 
+            type="text/javascript"
             tal:attributes="src string:++resource++collective.pdfjs.ecmascripts/viewer.js">
         </script>
-  <script type="text/javascript">
-    // Specify the main script used to create a new PDF.JS web worker.
-    PDFJS.workerSrc = '++resource++collective.pdfjs.ecmascripts/pdf.min.js';
-  </script>
+		<script type="text/javascript">
+		  // Specify the main script used to create a new PDF.JS web worker.
+		  PDFJS.workerSrc = '++resource++collective.pdfjs.ecmascripts/pdf.min.js';
+		</script>
     </metal:js>
 
-<body>
+	<body>
 
     <metal:content-core fill-slot="content-core">
         <metal:block define-macro="content-core"
                      tal:define="content_type context/get_content_type|context/Format">
             <p>
-                <metal:field use-macro="python:context.widget('file', mode='view')">
+			<metal:field use-macro="python:context.widget('file', mode='view')">
                 File
-                </metal:field>
+			</metal:field>
             </p>
             <div tal:condition="python: content_type.startswith('text')">
                 <h2 i18n:translate="heading_file_contents">File contents</h2>
@@ -41,44 +41,44 @@
 
                 <div id="pdf-controls">
                     <button id="previous"
-                        onclick="pdf.renderPrevPage();" 
-                        oncontextmenu="return false;">
+							onclick="pdf.page.number--;"
+							oncontextmenu="return false;">
                         &laquo; Previous
                     </button>
                     <button id="next"
-                        onclick="pdf.renderNextPage();"
-                        oncontextmenu="return false;">
+							onclick="pdf.page.number++;"
+							oncontextmenu="return false;">
                         Next &raquo;
                     </button>
                     <div id="pdf-stats">
-                    	<span id="pdf-page-number">1</span> / 
-                    	<span id="pdf-page-total">oo</span>
+						<span id="pdf-page-number">1</span> /
+						<span id="pdf-page-total">oo</span>
                     </div>
                 </div>
 
                 <hr />
 
 				<div id="pdf-viewer">
-                <canvas id="the-canvas" style="border:1px solid black;"/>
-                <noscript>
+					<canvas id="the-canvas" style="border:1px solid black;"/>
+					<noscript>
                     <object i18n:translate="noscript_plugin_required"
-                        tal:attributes="data context/id|nothing" 
-                        type="application/pdf" 
-                        width="100%" 
-                        height="600">
+							tal:attributes="data context/id|nothing"
+							type="application/pdf"
+							width="100%"
+							height="600">
                         PDF browser plugin required for preview.
                     </object>
-                </noscript>
+					</noscript>
 
-                <script tal:define="filename context/id"
+					<script tal:define="filename context/id"
                     tal:content="python: 'var pdf = new PdfView(\'%s\');' % filename"></script>
-                
+
                 </div>
 
             </div>
-            </metal:block>
-            </metal:content-core>
+		</metal:block>
+	</metal:content-core>
 
-        </body>
+</body>
 
-    </html>
+</html>

@@ -1,36 +1,71 @@
-/* Simple Viewer for pdf.js */
+/*
+ * A simple viewer for Pdf.js
+ *
+ * Creator: zedr
+ */
 
-'use strict';
+"use strict";
 
-var PdfView = function(url) {
-	document.title = this.url = url;
-	var self = this;
-	this.scale = 1.0;
-	this.canvas = document.getElementById('the-canvas');
-	this.context = this.canvas.getContext('2d');
-	this.pagenum = 1;
+var PdfView = function (url) {
+  this.canvas = document.getElementById('the-canvas');
+  this.context = this.canvas.getContext('2d');
+  this.cbuttons = {
+    pnum: document.getElementById('pdf-page-number'),
+    ptot: document.getElementById('pdf-page-total')
+  }
 
-	PDFJS.getPdf(url, function getPdfData(data) {
-		self.doc = new PDFJS.PDFDoc(data);
-	});
+  var self = this;
 
-	this.renderPage = function(num) {
-		var page = self.doc.getPage(num);
-		self.canvas.height = page.height * self.scale;
-		self.canvas.width = page.width * self.scale;
-		page.startRendering(self.context);
-	};
+  // The page number - start on zero
+  var pnum = 0;
 
-	this.renderNextPage = function() {
-		self.renderPage(++this.pagenum);
-	}
+  // The page zoom factor (scale)
+  var pscale = 1.0;
 
-	this.renderPrevPage = function() {
-		if (this.pagenum > 1) {
-			self.renderPage(--this.pagenum);
-		}
-	}
+  // Load the document
+  PDFJS.getPdf(url, function getPdfData(data) {
+    self.doc = new PDFJS.PDFDoc(data);
+  });
+
+  // Render the page
+  this.renderPage = function renderPage() {
+    var page = self.doc.getPage(pnum);
+
+    self.canvas.height = page.height * pscale;
+    self.canvas.width = page.width * pscale;
+
+    if (this.cbuttons.pnum !== 'undefined') {
+      this.cbuttons.pnum.innerHTML = pnum;
+    }
+    page.startRendering(self.context);
+  }
+
+  // Define or read page properties (auto-rendering afterwards)
+  this.page= {
+    // The page number
+    get number()   { return pnum },
+    set number(val)  {
+      if (typeof val === "number" && val > 0) {
+        pnum = Math.ceil(val);
+        self.renderPage()
+      }
+    },
+    // The page scale
+    get scale() { return pscale },
+    set scale(val) {
+      if (typeof val === "number" && val > 0.25 && val <= pdf.page.lastpage) {
+        pscale = val;
+        self.renderPage()
+      }
+    },
+
+    // The number of pages
+    get lastpage() { return self.doc.numPages }
+  };
+
+
 
 }
 
 /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */
+
