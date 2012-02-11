@@ -50,6 +50,17 @@
 							oncontextmenu="return false;">
                         Next &raquo;
                     </button>
+                    <button id="zoomless"
+							onclick="pdf.page.scale-=0.25;"
+							oncontextmenu="return false;">
+						-
+                    </button>
+                    <button id="zoommore"
+							onclick="pdf.page.scale+=0.25;"
+							oncontextmenu="return false;">
+                        +
+                    </button>
+
                     <div id="pdf-stats">
 						<span id="pdf-page-number">1</span> /
 						<span id="pdf-page-total">oo</span>

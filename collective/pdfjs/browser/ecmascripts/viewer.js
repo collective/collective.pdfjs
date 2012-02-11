@@ -65,7 +65,7 @@ var PdfView = function (url) {
     },
 
     // The number of pages
-    get lastpage() { return self.doc.numPages }
+    get lastpage() { if (self.doc) return self.doc.numPages }
   };
 
   // Initialize the viewer on the canvas
