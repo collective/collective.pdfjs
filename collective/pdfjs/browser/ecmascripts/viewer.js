@@ -68,8 +68,10 @@ var PdfView = function (url) {
     get lastpage() { return self.doc.numPages }
   };
 
+  // Initialize the viewer on the canvas
   this.init = function init() {
     self.page.number = 1;
+    self.cbuttons.ptot.innerHTML = self.page.lastpage;
   }
 
 }
