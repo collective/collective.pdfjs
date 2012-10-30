@@ -6,7 +6,7 @@
         enabled="True" expression="python:object.portal_type == 'File'" inline="False" />
         
     <javascript id="++resource++collective.pdfjs/pdf.js"
-        authenticated="False" cacheable="True" compression="safe" cookable="True"
+        authenticated="False" cacheable="True" compression="none" cookable="True"
         enabled="True" expression="python:object.portal_type == 'File'" inline="False" />
         
 	<javascript id="++resource++collective.pdfjs/compatibility.js"

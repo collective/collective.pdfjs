@@ -6,6 +6,5 @@
 		id="++resource++collective.pdfjs/viewer.css"
 		media="" rel="stylesheet" rendering="import" cacheable="True"
 		compression="safe" cookable="True" enabled="1" expression=""
-		insert-before="ploneCustom.css" />
-
+		insert-before="ploneCustom.css" applyPrefix="True"/>
 </object>
