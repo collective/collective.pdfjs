@@ -16,7 +16,7 @@
   <browser:menuItem
       for="Products.ATContentTypes.interface.IATFile"
       menu="plone_displayviews"
-      title="Pdf.js View"
+      title="Pdf Reader"
       action="@@pdfjs_file_view"
       description="View the PDF file inside the page, using an inline reader"
       />
