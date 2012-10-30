@@ -26,7 +26,7 @@ class TestSetup(unittest.TestCase):
         portal = self.layer['portal']
         css = getToolByName(portal, 'portal_css')
         self.assertTrue(
-            '++resource++collective.pdfjs.stylesheets/pdfjs.css'
+            '++resource++collective.pdfjs/viewer.css'
             in css.getResourceIds())
 
     def test__verify_my_ecmascripts(self):
@@ -34,8 +34,11 @@ class TestSetup(unittest.TestCase):
         portal = self.layer['portal']
         jss = getToolByName(portal, 'portal_javascripts')
         scripts = [
-        '++resource++collective.pdfjs.ecmascripts/pdf.js',
-        '++resource++collective.pdfjs.ecmascripts/pdf.min.js'
+        '++resource++collective.pdfjs/pdf.js',
+        '++resource++collective.pdfjs/l10n.js',
+        '++resource++collective.pdfjs/compatibility.js',
+        '++resource++collective.pdfjs/viewer.js',
+        '++resource++collective.pdfjs/ploneintegration.js',
         ]
         for s in scripts:
             self.assertTrue(s in jss.getResourceIds())
@@ -60,4 +63,5 @@ class TestSetup(unittest.TestCase):
         browser = Browser(portal)
         browser.open(portal['f2'].absolute_url() + '/pdfjs_file_view')
         # A DOM element associated with this view is present
-        self.assertTrue('#controls-wrapper' in browser.contents)
+        self.assertTrue('#outerContainer' not in browser.contents)
+        # todo: upload pdf and check if outerContainer exists

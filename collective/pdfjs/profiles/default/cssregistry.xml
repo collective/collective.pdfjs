@@ -3,7 +3,7 @@
 <object name="portal_css">
 
 	<stylesheet
-		id="++resource++collective.pdfjs.stylesheets/pdfjs.css"
+		id="++resource++collective.pdfjs/viewer.css"
 		media="" rel="stylesheet" rendering="import" cacheable="True"
 		compression="safe" cookable="True" enabled="1" expression=""
 		insert-before="ploneCustom.css" />

@@ -22,18 +22,8 @@
       />
     
   <browser:resourceDirectory
-      name="collective.pdfjs.ecmascripts"
-      directory="ecmascripts"
-      />
-      
-  <browser:resourceDirectory
-      name="collective.pdfjs.images"
-      directory="images"
-      />
-      
-  <browser:resourceDirectory
-      name="collective.pdfjs.stylesheets"
-      directory="stylesheets"
+      name="collective.pdfjs"
+      directory="resources"
       />
       
 </configure>

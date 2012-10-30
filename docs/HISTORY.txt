@@ -1,5 +1,9 @@
 Changelog
 =========
+0.5 unreleased
+-----
+    - Overhaul to the most recent pdfjs release including its recent viewer.js
+      [jensens, benniboy]
 
 0.4.2dev
 -----

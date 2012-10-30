@@ -1,12 +1,24 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts">
 
-	<javascript id="++resource++collective.pdfjs.ecmascripts/pdf.js"
+    <javascript id="++resource++collective.pdfjs/l10n.js"
+        authenticated="False" cacheable="True" compression="safe" cookable="True"
+        enabled="True" expression="python:object.portal_type == 'File'" inline="False" />
+        
+    <javascript id="++resource++collective.pdfjs/pdf.js"
+        authenticated="False" cacheable="True" compression="safe" cookable="True"
+        enabled="True" expression="python:object.portal_type == 'File'" inline="False" />
+        
+	<javascript id="++resource++collective.pdfjs/compatibility.js"
 		authenticated="False" cacheable="True" compression="safe" cookable="True"
-		enabled="False" expression="" inline="False" />
+		enabled="True" expression="python:object.portal_type == 'File'" inline="False" />
 
-	<javascript id="++resource++collective.pdfjs.ecmascripts/pdf.min.js"
+	<javascript id="++resource++collective.pdfjs/viewer.js"
 		authenticated="False" cacheable="True" compression="safe" cookable="True"
-		enabled="True" expression="" inline="False" />
+		enabled="True" expression="python:object.portal_type == 'File'" inline="False" />
 
+    <javascript id="++resource++collective.pdfjs/ploneintegration.js"
+        authenticated="False" cacheable="True" compression="safe" cookable="True"
+        enabled="True" expression="python:object.portal_type == 'File'" inline="False" />
+        
 </object>

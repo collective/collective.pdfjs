@@ -1,0 +1,20 @@
+put all the needed stuff in the resources directory:
+    the images folder where the needed pics are in
+    the l10n.js for translation
+    the locale.properties file
+    and the compatibility.js for browser support
+    and the integration.js to make it look nice in plone
+
+
+adjusted css and jsregistry under profiles
+
+in the configure zcml also adjusted the resourcedirectory
+
+in the pdfjs_file_view.pt added a headslot and filled it with locale.properties
+
+then in the pagetemplate copied the structure from the original mozillapdfjs 
+
+in viewer.js added the PDFJS.workerSrc to "++resource++collective.pdfjs.resources/pdf.js";
+
+also added on line 2674: if (jQuery("#outerContainer").length == 0) {return};
+to only load on demand and on pdf (not every plone item)
