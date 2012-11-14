@@ -3126,7 +3126,7 @@ window.addEventListener('keydown', function keydown(evt) {
       return; // ignoring if the 'toolbar' element is focused
     curElement = curElement.parentNode;
   }
-
+/*
   if (cmd == 0) { // no control key pressed at all.
     switch (evt.keyCode) {
       case 38: // up arrow
@@ -3174,7 +3174,7 @@ window.addEventListener('keydown', function keydown(evt) {
         break;
     }
   }
-
+*/
   if (cmd == 4) { // shift-key
     switch (evt.keyCode) {
       case 82: // 'r'
