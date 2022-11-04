@@ -1,32 +1,38 @@
 Changelog
 =========
-1.0 unreleased
------
+
 1.0 (2022-11-04)
-      [jensens, benniboy]
+----------------
 
-    - make it compatiple with Plone 6
-      [MrTango]
+- Overhaul to the most recent pdfjs release including its recent viewer.js
+  [jensens, benniboy]
 
-0.4.2dev
+- make it compatiple with Plone 6
+  [MrTango]
+
+0.4.2
 -----
-    - Tests: added a test on availableLayouts
-      This fails because the view is not present,
-        no idea why. Must recheck.
-    - Added human name for the view, after a suggestion by
-      Marcel
+
+- Tests: added a test on availableLayouts
+  This fails because the view is not present,
+  no idea why. Must recheck.
+
+- Added human name for the view, after a suggestion by
+  Marcel
 
 0.4.0
 -----
-    - Tests: basic code coverage
-    - Reasonably minified pdf.js
+
+- Tests: basic code coverage
+- Reasonably minified pdf.js
 
 0.3.6
----------------------
-    - Minified pdf.min.js
-    - Tested on Chrome and Firefox
+-----
+
+- Minified pdf.min.js
+- Tested on Chrome and Firefox
 
 0.2.2
----------------------
+-----
 
-    - Renders the Tracemonkey PDF
+- Renders the Tracemonkey PDF
