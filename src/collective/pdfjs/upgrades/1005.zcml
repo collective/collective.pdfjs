@@ -1,0 +1,25 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:gs="http://namespaces.zope.org/genericsetup">
+
+  <gs:registerProfile name="1005"
+    title="Load new resources registration config"
+    directory="1005"
+    description='Configuration for version 1005'
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <gs:upgradeSteps source="1004"
+    destination="1005"
+    profile="collective.pdfjs:default">
+
+    <gs:upgradeStep title="Load new resources registration config"
+      description=""
+      handler=".v1005.upgrade" />
+
+    <gs:upgradeDepends title="Load new resources registration config (GS profile)"
+      description=""
+      import_profile="collective.pdfjs.upgrades:1005" />
+
+  </gs:upgradeSteps>
+
+</configure>
