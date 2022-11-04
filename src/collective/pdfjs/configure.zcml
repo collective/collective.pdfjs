@@ -14,10 +14,29 @@
       description="Integrates Mozilla's PDF reader, written in JavaScript, in
 Plone; and also provides and enables a special view for the File content-type"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
       />
-      
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective.pdfjs (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective.pdfjs add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.pdfjs-hiddenprofiles"
+      />
+
   <include package=".browser" />
 
   <i18n:registerTranslations directory="locales" />
-  
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <include package=".upgrades" />
+
 </configure>

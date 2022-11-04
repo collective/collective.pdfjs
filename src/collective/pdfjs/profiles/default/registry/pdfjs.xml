@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        i18n:domain="collective.pdfjs">
+
+        <records prefix="plone.bundles/pdfjs-ln10"
+                interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+                <value key="enabled">True</value>
+                <value key="depends">plone</value>
+                <value key="expression">python:object.portal_type == 'File'</value>
+                <value key="jscompilation">++resource++collective.pdfjs/l10n.js</value>
+                <!-- <value key="csscompilation"></value> -->
+        </records>
+
+        <records prefix="plone.bundles/pdfjs-pdf"
+                interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+                <value key="enabled">True</value>
+                <value key="depends">pdfjs-ln10</value>
+                <value key="expression">python:object.portal_type == 'File'</value>
+                <value key="jscompilation">++resource++collective.pdfjs/pdf.js</value>
+                <!-- <value key="csscompilation"></value> -->
+        </records>
+
+        <records prefix="plone.bundles/pdfjs-compatibility"
+                interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+                <value key="enabled">True</value>
+                <value key="depends">pdfjs-pdf</value>
+                <value key="expression">python:object.portal_type == 'File'</value>
+                <value key="jscompilation">++resource++collective.pdfjs/compatibility.js</value>
+                <!-- <value key="csscompilation"></value> -->
+        </records>
+
+        <records prefix="plone.bundles/pdfjs-viewer"
+                interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+                <value key="enabled">True</value>
+                <value key="depends">pdfjs-compatibility</value>
+                <value key="expression">python:object.portal_type == 'File'</value>
+                <value key="jscompilation">++resource++collective.pdfjs/viewer.js</value>
+                <value key="csscompilation">++resource++collective.pdfjs/viewer.css</value>
+        </records>
+
+        <records prefix="plone.bundles/pdfjs-ploneintegration"
+                interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+                <value key="enabled">True</value>
+                <value key="depends">pdfjs-viewer</value>
+                <value key="expression">python:object.portal_type == 'File'</value>
+                <value key="jscompilation">++resource++collective.pdfjs/ploneintegration.js</value>
+                <!-- <value key="csscompilation"></value> -->
+        </records>
+
+
+</registry>

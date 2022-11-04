@@ -9,9 +9,11 @@ eggs/
 egg-cache/
 old-eggs/
 parts/
-src/
 *.pyc
 *.pyo
 .pydevproject.bak
 .settings
 var/
+/venv39
+/.vscode
+/.python-version
