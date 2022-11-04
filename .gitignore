@@ -15,3 +15,6 @@ src/
 .pydevproject.bak
 .settings
 var/
+/venv39
+/.vscode
+/.python-version
