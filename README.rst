@@ -79,3 +79,5 @@ Contributors
 - Jens Klein
 
 - Benjamin Stefaner
+
+- Maik Derstappen <md@derico.de> <http://github.com/MrTango>
