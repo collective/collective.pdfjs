@@ -8,12 +8,12 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [
-            "jlu.contenttypes:uninstall",
+            "collective.pdfjs:uninstall",
         ]
 
     def getNonInstallableProducts(self):
         """Hide the upgrades package from site-creation and quickinstaller."""
-        return ["jlu.contenttypes.upgrades"]
+        return ["collective.pdfjs.upgrades"]
 
 
 def post_install(context):
