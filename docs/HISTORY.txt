@@ -1,9 +1,12 @@
 Changelog
 =========
-0.5 unreleased
+1.0 unreleased
 -----
     - Overhaul to the most recent pdfjs release including its recent viewer.js
       [jensens, benniboy]
+
+    - make it compatiple with Plone 6
+      [MrTango]
 
 0.4.2dev
 -----
