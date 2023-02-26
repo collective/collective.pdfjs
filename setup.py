@@ -35,6 +35,7 @@ setup(name='collective.pdfjs',
       install_requires=[
           'setuptools',
           'Products.CMFPlone',
+          'plone.app.upgrade',
       ],
       extras_require={
           'test': ['plone.app.testing',],
