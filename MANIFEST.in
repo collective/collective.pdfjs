@@ -1,3 +1,5 @@
 include *.rst *.txt
-recursive-include docs *.txt
+recursive-include docs *
 recursive-include src *.txt *.py *.po *.pt *.xml *.zcml *.js *.css *.properties *.svg *.png *.gif
+exclude base.cfg bobtemplate.cfg buildout.cfg test_plone52.cfg test_plone60.cfg
+exclude src/collective/pdfjs/upgrades/1005/.gitkeep

@@ -4,7 +4,7 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Depend only on Products.CMFPlone not on Plone package
 
 
 1.0.2 (2022-11-04)
