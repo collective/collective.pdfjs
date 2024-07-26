@@ -4,7 +4,7 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Better CSS scoping for toolbar styles, to reduce side effects on other layout elements.
 
 
 1.0.4 (2023-02-27)
