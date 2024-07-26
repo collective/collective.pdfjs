@@ -209,7 +209,7 @@ html[dir='rtl'] #sidebarContent {
   left: 0;
 }
 
-.toolbar {
+.template-pdfjs_file_view .toolbar {
   position: absolute;
   left: 0;
   right: 0;
@@ -218,11 +218,11 @@ html[dir='rtl'] #sidebarContent {
   cursor: default;
 }
 
-#toolbarContainer {
+.template-pdfjs_file_view #toolbarContainer {
   width: 100%;
 }
 
-#toolbarSidebar {
+.template-pdfjs_file_view #toolbarSidebar {
   width: 200px;
   height: 29px;
   background-image: url(images/texture.png),
@@ -242,7 +242,7 @@ html[dir='rtl'] #sidebarContent {
               0 1px 1px hsla(0,0%,0%,.1);
 }
 
-#toolbarViewer, .findbar {
+.template-pdfjs_file_view #toolbarViewer, .findbar {
   position: relative;
   height: 32px;
   background-image: url(images/texture.png),
@@ -400,25 +400,25 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
   float: right;
 }
 
-.toolbarButton {
+.template-pdfjs_file_view .toolbarButton {
   border: 0 none;
   background-color: rgba(0, 0, 0, 0);
   width: 32px;
   height: 25px;
 }
 
-.toolbarButton > span {
+.template-pdfjs_file_view .toolbarButton > span {
   display: inline-block;
   width: 0;
   height: 0;
   overflow: hidden;
 }
 
-.toolbarButton[disabled] {
+.template-pdfjs_file_view .toolbarButton[disabled] {
   opacity: .5;
 }
 
-.toolbarButton.group {
+.template-pdfjs_file_view .toolbarButton.group {
   margin-right:0;
 }
 
@@ -462,8 +462,8 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .splitToolbarButton > .toolbarButton:hover,
 .splitToolbarButton > .toolbarButton:focus,
 .dropdownToolbarButton:hover,
-.toolbarButton.textButton:hover,
-.toolbarButton.textButton:focus {
+.template-pdfjs_file_view .toolbarButton.textButton:hover,
+.template-pdfjs_file_view .toolbarButton.textButton:focus {
   background-color: hsla(0,0%,0%,.2);
   box-shadow: 0 1px 0 hsla(0,0%,100%,.05) inset,
               0 0 1px hsla(0,0%,100%,.15) inset,
